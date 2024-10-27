@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Schable: JSON Schema to HTML Table</title>
+		<link href="schable.css" rel="stylesheet" >
+		<script src="schable.js"></script>
+	</head>
+
+	<body>
+		<script>
+			const jsonSchemaUrl = "https://openethics.ai/schema/oedp.passport.schema.json";
+			schable(jsonSchemaUrl, ".oedp", captions = true, proxy = true, max_depth = 12);
+		</script>
+		<div class="oedp"></div>	
+	</body>
+</html>

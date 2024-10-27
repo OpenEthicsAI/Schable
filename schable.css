@@ -1,0 +1,179 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+
+.schable {
+	--padding-size: 14px;
+	--border-size: 8px;
+	font-family: monospace;
+}
+.schable figure {
+	margin: 0;
+	padding: 0;
+}
+.schable figcaption {
+	margin: 0;
+	padding: 0;
+}
+.schable .schable-table {
+	margin: 1em 0 0 0;
+}
+.schable .header,
+.schable .element {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid rgba(200, 200, 200, 0.5);
+	border-width: 0 1px 1px 0;
+	
+}
+.schable .header {
+	border-width: 1px 1px 0 1px;
+}
+.schable .header > div > span {
+	text-align: left;
+	padding: var(--padding-size);
+	font-weight: bold;
+	display: block;
+}
+.schable .header > .name > span {
+	margin-left: var(--border-size);
+}
+
+.schable .element > div > div {
+	text-align: left;
+	padding: var(--padding-size);
+}
+
+.schable .name {
+	display: flex;
+	padding: 0;
+}
+.schable .name > .border {
+	width: var(--border-size);
+	padding: 0;
+/* 	opacity: 0.5;
+ */	border-left: 1px solid rgba(200, 200, 200, 1);
+}
+.schable .name > .indentation {
+	width: 0;
+	padding: 0;
+	background-color: #ffffff;
+}
+.schable .name > .property {
+	font-weight: bold;
+	overflow-x: hidden;
+	cursor: pointer;
+	
+}
+.schable .name {
+	width: 20%;
+}
+.schable .type {
+	width: 15%;
+}
+.schable .description {
+	width: 55%;
+	word-break: break-all;
+}
+
+.schable .required {
+	width: 10%;
+}
+.schable .element i[class*="fa-"] {
+	font-size: smaller;
+	opacity: 0.5;
+}
+.schable .element:hover {
+	background-color: rgba(200, 200, 200, 0.2);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* horizontal-offset vertical-offset blur spread color */
+}
+.schable .element:hover .description {
+	font-weight: bold;
+}
+.schable .element:hover i[class*="fa-"] {
+	opacity: 1;
+}
+.schable .element:hover .border {
+	opacity: 1;
+	border-left: 1px solid rgba(200, 200, 200, 0.5);
+}
+.schable-table > *:nth-child(2):hover {
+	background-color: transparent;
+	box-shadow: none;
+}
+.schable-table > *:nth-child(2).element .required {
+	visibility: hidden;
+}
+.schable-table > *:nth-child(2).element .description {
+	font-weight: normal;
+}
+
+
+
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.6);
+	
+  }
+  
+  .modal-content {
+	background-color: #ffffff;
+	margin: 15% auto;
+	padding: 2em;
+	width: 60%;
+	border-radius: 6px;
+	font-family: 'Courier New', Courier, monospace;
+  }
+  
+
+  
+  .modal button {
+	margin-top: 1em;
+  }
+  .modal #modalDescription {
+	font-weight: bold;
+  }
+  .modal #closeButton {
+	display: none;
+  }
+  .modal hr#modalColored {
+    border: none;
+    height: 2px;
+    margin: 20px 0;
+	border-radius: 2px;
+}
+.modal #pathField {
+	padding: 1em 3em 1em 1em;
+	font-size: 1.3em;
+	border-radius: 2px;
+	background-color: #efefef;
+	border: 1px solid transparent;
+	position: relative;
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Or other value like clip */
+  }
+.modal #pathField:hover {
+
+}
+.copy-icon {
+	position: absolute;
+	top: 50%;
+	right: 1.3em;
+	transform: translateY(-50%);
+	cursor: pointer;
+	color: #00000077;
+}
+.copy-icon:hover {
+	color: #000000FF;
+}
