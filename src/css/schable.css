@@ -189,7 +189,7 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.schable .name {
 		min-width: 80px;
 	}
@@ -211,7 +211,7 @@
 
 	.modal-content {
 		padding: 1em;
-		margin: 1em;
+		margin: 4em 1em 0em 4em;
 		width: auto;
 		border-radius: 6px;
 		font-family: 'Courier New', Courier, monospace;
