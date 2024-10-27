@@ -3,11 +3,13 @@ Schable: Schema into Table
 
 A JavaScript tool to visualize JSON Schema as HTML Table.
 
+To test, install `node.js` if not yet installed, navigate to the repo folder and launch `server.js`.
+
 1. Add JS and CSS in the header
 
 ```html
-<link href="schable.css" rel="stylesheet" >
-<script src="schable.js"></script>
+<link href="/src/schable.css" rel="stylesheet" >
+<script src="/src/schable.js"></script>
 ```
 
 2. Call schable(), specifying the div class
