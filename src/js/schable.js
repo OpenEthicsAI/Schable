@@ -164,6 +164,7 @@ async function createSchemaTable(schema, max_depth = 8) {
 			let descriptionTitle = ``;
 			let requiredTitle = `This is an optional property`;
 			let constValue = propertyData.const;
+			//TODO add propertyData.title todescribe elements better, however questionable because property names should be enough
 
 			if (constraintCategory) {
 				//add a constraintCategory
