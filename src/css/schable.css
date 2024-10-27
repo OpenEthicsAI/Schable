@@ -66,18 +66,22 @@
 	
 }
 .schable .name {
-	width: 20%;
+	width: 25%;
+	min-width: 140px;
 }
 .schable .type {
 	width: 15%;
 }
 .schable .description {
-	width: 55%;
+	width: 48%;
 	word-break: break-all;
 }
 
 .schable .required {
-	width: 10%;
+	width: 12%;
+	overflow-x: hidden;
+	white-space: nowrap;
+	min-width: 100px;
 }
 .schable .element i[class*="fa-"] {
 	font-size: smaller;
@@ -159,14 +163,12 @@
 	border: 1px solid transparent;
 	position: relative;
 	font-family: 'Courier New', Courier, monospace;
-	margin: 0;
+	margin:0;
+	margin-top: 0.5em;
 	overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis; /* Or other value like clip */
   }
-.modal #pathField:hover {
-
-}
 .copy-icon {
 	position: absolute;
 	top: 50%;
@@ -177,4 +179,46 @@
 }
 .copy-icon:hover {
 	color: #000000FF;
+}
+
+.required-label {
+	padding-left: 1em;
+}
+
+
+
+
+
+@media (max-width: 500px) {
+	.schable .name {
+		min-width: 80px;
+	}
+	.schable .type {
+		display: none;
+	}
+	.schable .required {
+		min-width: 40px;
+	}
+	.required-label {
+		display: none;
+	}
+	.indentation {
+		display: none;
+	}
+	.border {
+		min-width: 8px;
+	}
+
+	.modal-content {
+		padding: 1em;
+		margin: 1em;
+		width: auto;
+		border-radius: 6px;
+		font-family: 'Courier New', Courier, monospace;
+	  }
+	#modalRequired .required-label {
+		display: inline;
+	}
+
+
 }

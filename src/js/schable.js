@@ -158,7 +158,7 @@ async function createSchemaTable(schema, max_depth = 8) {
 			let propertyValue = property;
 			let typeValue = propertyData.type;
 			let descriptionValue = propertyData.description || `No description available`;
-			let requiredValue = `<i class="far fa-lightbulb"></i> optional`;
+			let requiredValue = `<i class="far fa-lightbulb"></i><span class="required-label">optional</span>`;
 			let propertyTitle = ``;
 			let typeTitle = ``;
 			let descriptionTitle = ``;
@@ -188,7 +188,7 @@ async function createSchemaTable(schema, max_depth = 8) {
 				propertyTitle = `${propertyTitle} The property is defined using the schema located at ${additionalArgs[1]}`;
 			}
 			if (required) {
-				requiredValue = `<i class="far fa-check-square"></i> required`;
+				requiredValue = `<i class="far fa-check-square"></i><span class="required-label">required</span>`;
 				requiredTitle = `This is a required property`;
 			}
 
@@ -545,7 +545,7 @@ function copyToClipboard(content, feedbackColor="#3e8914") {
 
 // Function to calculate the background color based on parent color and indent level
 function calculateColor(parentColor, indent) {
-	const alpha = Math.min(0xff - indent * 0x28, 0xff);
+	const alpha = Math.min(0xff - indent * 0x20, 0xff);
 	const alphaHex = alpha.toString(16).padStart(2, "0");
 	return parentColor.slice(0, 7) + alphaHex;
 }

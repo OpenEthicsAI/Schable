@@ -8,8 +8,8 @@ To test, install `node.js` if not yet installed, navigate to the repo folder and
 1. Add JS and CSS in the header
 
 ```html
-<link href="/src/schable.css" rel="stylesheet" >
-<script src="/src/schable.js"></script>
+<link href="/src/css/schable.css" rel="stylesheet" >
+<script src="/src/js/schable.js"></script>
 ```
 
 2. Call schable(), specifying the div class
