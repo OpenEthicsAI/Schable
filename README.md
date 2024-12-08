@@ -12,12 +12,12 @@ To test, install `node.js` if not yet installed, navigate to the repo folder and
 <script src="/src/js/schable.js"></script>
 ```
 
-2. Call schable(), specifying the div class
+2. Call schable(), specifying the div class. Set `proxy = true` when using on `localhost`.
 
 ```html
 <script>
-    const jsonSchemaUrl = "https://openethics.ai/schema/oedp.passport.schema.json";
-    schable(jsonSchemaUrl, ".oedp", captions = true, proxy = true, max_depth = 12);
+    const jsonSchemaUrl = "https://openethics.ai/schema/oedp/oedp.passport.schema.json";
+    schable(jsonSchemaUrl, ".oedp", captions = true, proxy = false, max_depth = 12);
 </script>
 <div class="oedp"></div>
 ```
